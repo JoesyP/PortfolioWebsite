@@ -114,6 +114,7 @@ nav ul li a:hover::after{
 }
 .about-col-1{
   flex-basis: 35%;
+  margin-right: 30dp;
 }
 .about-col-1 img{
   padding-top: 10px;
@@ -125,10 +126,17 @@ nav ul li a:hover::after{
 .about-col-2{
   flex-basis: 60%;
 }
+.about-col-2 text{
+  text-align: center;
+}
 .sub-title{
+  text-align: center;
   font-size: 70px;
   font-weight: 600;
   color: #fff;
+}
+.sub-title:p{
+  text-align: center;
 }
 .tab-titles{
   display: flex;
@@ -309,18 +317,27 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
+  #banner{
+    margin:0;
+    padding:0;
+    flex-basis: 100%;
+    width:100%;
+  }
   .banner-text{
+    padding-left: 0;
     margin-left: 20px;
     text-align: left;
     margin-top: 100px;
     font-size: 16px;
   }
-  p{
+  .p{
     font-size: 20px;
   }
   .banner-text h1{
-    font-size: 30px;
+    font-size: 25px;
+    font-family: 'Times New Roman';
   }
+  
   .sub-title{
     font-size: 40px;
   }
@@ -335,13 +352,17 @@ nav .fas{
     color: #fff;
     display: block;
     font-size: 25px;
+    margin-bottom: 80px;
+  }
+  .fas fa-bars{
+    margin-top: 20px;
   }
   nav ul{
     background: #00bce4;
     position: fixed;
     top: 0;
     right: -300px;
-    width: 200px;
+    width: 120px;
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
@@ -349,7 +370,7 @@ nav .fas{
   }
   nav ul li{
     display: block;
-    margin: 25px;
+    margin: 15px;
   }
   nav ul .fas{
   position: absolute;
@@ -357,5 +378,62 @@ nav .fas{
     left: 25px;
     cursor: pointer;
   }
-}
+  .sub-title{
+    font-size: 20px;
+    margin-left: 10px;
+  }
+ .about-col-1{
+   margin: 10px;
+   padding-right:20px;
+   flex-basis: 85%;
+ }
+   .about-col-2{
+    flex-basis: 100%;
+  }
+ 
+  .image1 {
+    display: none; 
+  }
+ 
 
+  .tab-contents.active-tab ul {
+    list-style-type: none; 
+    padding-left: 10px; 
+  }
+
+
+  .tab-contents.active-tab ul li {
+    margin-bottom: 10px; 
+  }
+
+  .tab-contents.active-tab ul li span {
+    font-weight: bold; 
+    font-size: 16px;
+  }
+
+  .tab-contents.active-tab ul li {
+    margin-right: 20px;
+  }
+  ul.li:span{
+    text-align: left;
+    margin-inline-start: 10dp;
+    font-size: 20px;
+    
+  }
+ .contact-left, .contact-right{
+   flex-basis: 100%;
+ }
+  .contact-right{
+    margin-right: 20px;
+  }
+  .copyright{
+      font-size: 14px;
+  }
+  .btn2{
+    align-self: right;
+  }
+  .logo{
+    width:35%;
+    height:auto;
+  }
+}
