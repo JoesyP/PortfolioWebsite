@@ -1,187 +1,192 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JosePerdomo</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="https://kit.fontawesome.com/76991d16bc.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose &mdash; Software Engineer</title>
+<meta name="description" content="Jose — Software Engineer at BNY. AI automation, full-stack development, and cloud deployment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
 
-  <section id="banner">
-  
-    
-      
-    <div class ="hero">
-    </div>  
-    <div class= container>
-      <nav>
-        <img src="images/Logo.png" class="logo">
-        <ul id="sidemenu">
-          <li><a href="#banner">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#Projects">Projects</a></li>       
-          <li><a href="#contact">Contact</a></li>
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">jose<span>.dev</span></div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-            <i class="fas fa-circle-xmark" onclick="closemenu()"></i>
-        </ul>
-        <i class="fas fa-bars" onclick="openmenu()"></i>
-      </nav>
-    </div>
-    <div class="banner-text">
-       <p>Aspiring Software Engineer </p>
-      <h1>Hello, I'm Jose Perdomo </h1>
-       
-    </div>
-  </section>
-  <!---------about---------->
-   <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img class="image1" src="images/About.png">
-           <img  class="image2" src="images/HS1.jpg">
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">SOFTWARE ENGINEER &middot; BNY</div>
+      <h1>Building systems<br>that <span class="grad">do the work</span><br>for you.</h1>
+      <p class="lead">I'm Jose &mdash; a Computer Science grad and software engineer who turns ideas into working products. I specialize in <strong>AI automation</strong>, <strong>full-stack development</strong>, and <strong>cloud deployment</strong>.</p>
+      <div class="cta-row">
+        <a href="#work" class="btn btn-primary">View my work &rarr;</a>
+        <a href="https://github.com/YOUR-USERNAME" class="btn btn-ghost">GitHub</a>
+      </div>
+      <div class="status"><span class="dot"></span> Full-time SWE @ BNY &middot; open to freelance</div>
+    </header>
+
+    <section class="section reveal" id="about">
+      <div class="sec-label">// 01</div>
+      <h2 class="sec-title">About me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a first-generation Computer Science graduate, born in Honduras and raised in Texas since age 11. I concentrated in <strong>Cloud Computing & Software Engineering</strong>, and I'm now back at <strong>BNY full-time as a Software Engineer</strong> after interning there.</p>
+          <p>I learn by building. Most of what I know comes from shipping real things &mdash; automation platforms, dashboards, e-commerce sites, and backend services that actually run. My strongest area is <strong>AI automation</strong>: orchestrating agents, wiring up APIs, and building pipelines that turn manual busywork into systems.</p>
+          <p>Outside of my day job I take on freelance projects and explore ways to turn engineering into real-world tools and small businesses.</p>
         </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About me</h1>
-            <p>Greetings, I'm Jose Perdomo, a first-generation student majoring in Computer Science with a passion for technology and innovation. Originally from Azacualpa, Honduras, I've called Texas home since childhood. <br><br>
+        <div class="facts">
+          <div class="fact"><div class="k">ROLE</div><div class="v">Software Engineer @ BNY</div></div>
+          <div class="fact"><div class="k">EDUCATION</div><div class="v">B.S. Computer Science</div></div>
+          <div class="fact"><div class="k">FOCUS</div><div class="v">Cloud &middot; SWE &middot; AI Automation</div></div>
+          <div class="fact"><div class="k">BASED IN</div><div class="v">Texas, USA</div></div>
+        </div>
+      </div>
+    </section>
 
-              My journey into Computer Science began during my senior year of high school in 2020 when I discovered the transformative potential of blockchain & A.I technology. Fascinated by its capacity for growth and innovation, I've been driven to explore its applications and implications for societal progress ever since.<br><br>
-
-              Beyond my academic pursuits, I prioritize a balanced lifestyle that includes spending quality time with loved ones and maintaining an active lifestyle through exercise, sports, and occasional video gaming. I am eager to leverage my skills and enthusiasm to contribute meaningfully to dynamic projects and teams in the field of Computer Science </p>
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-              <p class="tab-links" onclick="opentab('experiance')">Experiances</p>
-            </div>
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>Android Studio Development</span><br>Proficient in designing interactive Android applications.<br> </li> 
-                 <li><br><span>Tools & Frameworks</span><br>Violet UML,  GitHub, Unity game engine, Material Design 2 & 3 (UI)<br></li>
-                <li><br><span> Languages </span><br>Fluent in both spoken and written English and Spanish.<br><br> Comfortable working in C++, Java, Python, C#, HTML, CSS,JavaScript<br> </li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="education">
-              <ul>
-                <li><span>2021 - December,2023<br>Lone Star Community College, Computer Science</span><br><br>
-                     Relevant Course Work : Intro to Programming, Computer Programming II, Data Structures<br> </li>
-                <li><span>January, 2024 - 2026<br>The University of Texas at San Antonio, Bachelor of Science, Computer Science<br></span><br>
-                    Concentration in Data Science & Software Engineering<br>
-                    Relevant Course Work: Application Programming<br> </li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="experiance">
-              <ul>
-                <li><span>February,2022 - Present<br> HEB, Houston TX</span><br><br>Cashier , PLA and Self Check</br>Manage an area of Self Check which had 8 registers, and handle fast pace transactions for customers!</br> </li> 
-                 <li><span>March,2020 - May,2021<br>Cashier
-                   Wendy's, Houston TX</span><br><br>Worked as the drive through cashier for Wendy's. I was responsible for taking orders while ensuring customer satisfaction and maintaing a clean and orginized environment. </li>
-              </ul>
-            </div>
+    <section class="section reveal" id="skills">
+      <div class="sec-label">// 02</div>
+      <h2 class="sec-title">What I work with</h2>
+      <div class="skill-cats">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">SQL</span>
+            <span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">Bash</span>
+            <span class="tag">HTML/CSS</span>
           </div>
+        </div>
+        <div class="skill-card">
+          <h3>AI & Automation</h3>
+          <div class="tags">
+            <span class="tag">LLM agents</span><span class="tag">Agent orchestration</span>
+            <span class="tag">Workflow pipelines</span><span class="tag">API integration</span>
+            <span class="tag">Data scraping</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Backend & Data</h3>
+          <div class="tags">
+            <span class="tag">REST APIs</span><span class="tag">MySQL</span>
+            <span class="tag">Supabase</span><span class="tag">Firebase</span>
+            <span class="tag">CRUD systems</span><span class="tag">Auth</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Cloud & Tools</h3>
+          <div class="tags">
+            <span class="tag">AWS EC2</span><span class="tag">Linux</span>
+            <span class="tag">Git / GitHub</span><span class="tag">VS Code</span>
+            <span class="tag">Deployment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="work">
+      <div class="sec-label">// 03</div>
+      <h2 class="sec-title">Selected work</h2>
+      <div class="projects">
+
+        <div class="project featured">
+          <div class="project-top">
+            <h3>Multi-Agent AI Automation Platform</h3>
+            <span class="num">001</span>
+          </div>
+          <p>An AI-driven platform where multiple agents execute tasks and communicate through a centralized system &mdash; with command queues, agent coordination, live monitoring, and a dashboard control center. My most ambitious systems-design project.</p>
+          <div class="stack">
+            <span class="s">Python</span><span class="s">Supabase</span><span class="s">AI APIs</span><span class="s">SQL</span><span class="s">Dashboard UI</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-top">
+            <h3>Etsy AI Automation Business</h3>
+            <span class="num">002</span>
+          </div>
+          <p>An end-to-end system automating an Etsy storefront: AI listing generation, content creation, marketing workflows, and Pinterest distribution &mdash; turning a manual business into a pipeline.</p>
+          <div class="stack">
+            <span class="s">Python</span><span class="s">Etsy API</span><span class="s">Pinterest API</span><span class="s">AI APIs</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-top">
+            <h3>Clash Royale Analytics Dashboard</h3>
+            <span class="num">003</span>
+          </div>
+          <p>An interactive dashboard visualizing game data through charts, stats, and widget-based interfaces &mdash; focused on clean UI and a genuinely usable data experience.</p>
+          <div class="stack">
+            <span class="s">JavaScript</span><span class="s">HTML</span><span class="s">CSS</span><span class="s">Charting libs</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-top">
+            <h3>AI Agent Command Dashboard</h3>
+            <span class="num">004</span>
+          </div>
+          <p>A centralized dashboard to control multiple AI workers &mdash; command dispatching, agent status tracking, queue management, and live response logs, all driven through a database backend.</p>
+          <div class="stack">
+            <span class="s">Python</span><span class="s">Supabase</span><span class="s">SQL</span><span class="s">Dashboard UI</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-top">
+            <h3>Sorcerer's E-Commerce Site</h3>
+            <span class="num">005</span>
+          </div>
+          <p>A fantasy-themed storefront selling scrolls, potions, spell books, and magical ingredients &mdash; a frontend project with playful UI and clean structure.</p>
+          <div class="stack">
+            <span class="s">HTML</span><span class="s">CSS</span><span class="s">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-top">
+            <h3>AWS Hosted Deployments</h3>
+            <span class="num">006</span>
+          </div>
+          <p>Deployed and managed live websites and backend services on cloud infrastructure &mdash; server administration, hosting, and real production deployment on EC2.</p>
+          <div class="stack">
+            <span class="s">AWS EC2</span><span class="s">Linux</span><span class="s">Web servers</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+      <h2>Let's <span class="grad">build something.</span></h2>
+      <p>Open to freelance work, collaborations, and interesting problems.</p>
+      <div class="contact-links">
+        <a href="mailto:calpules1@icloud.com" class="btn btn-primary">calpules1@icloud.com</a>
+        <a href="https://github.com/YOUR-USERNAME" class="btn btn-ghost">GitHub</a>
+        <a href="https://linkedin.com/in/YOUR-PROFILE" class="btn btn-ghost">LinkedIn</a>
+      </div>
+    </section>
   </div>
-      <!------services------------------------------------>
-       <div id="Projects">
-        <div class="container">
-          <h1 class="sub-title">My Projects</h1>
-          <div class="projects-list">
-            <div>
-              <i class="fa-brands fa-app-store"></i>
-              <h2>Android Project</h2>
-              <p>I teamed up to develop an Android app in Android Studio using Java and SQLite for a boxing gym, offering members a user-friendly interface to track their stats and an admin portal for authorized personnel to adjust member information in the database.</p>
-              <a href="https://github.com/JoesyP/RowdyRumble"> Learn more</a>
-            </div>
-            <div>
-              <i class="fa-solid fa-code"></i>
-              <h2>RowdyHacks 2024</h2>
-              <p>Collaborated with a team of three others to develop RowdyRun, an augmented reality infinite runner game using the Unity game engine (C#). Although we successfully implemented the game logic, we encountered challenges in deploying the app for the hackathon within the given timeframe. </p>
-              <a href="https://github.com/JoesyP/UnityProject"> Learn more</a>
-            </div>
-            <div>
-               <i class="fa-solid fa-code"></i>
-              <h2>Portfolio Website</h2>
-              <p>Developed this website as a platform to showcase my skills and projects, serving as both a personal portfolio and a valuable resource for potential employers to explore further.(HTML, CSS, JavaScript) </p>
-              <a href="#banner"> Learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-------contact--------------------------------------------------->
-      <div id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="contact-left">
-              <h1 class="sub-title"> Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>Calpules1@icloud.com</p>
-                <p><i class="fa-solid fa-phone-square"></i>(818) - 294 - 4596</p>
-                <div class="social-icons">
-                  <a href="https://github.com/JoesyP"><i class="fab fa-github"></i></a>
-                  <a href="https://www.instagram.com/jose.perdomo_/"><i class="fab fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/in/jose-perdom/"><i class="fab fa-linkedin"></i></a>
-                </div>
-              <a href="FixedBCResume.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right"> 
-            <form name="submit-to-google-sheet">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <textarea name="Message"rows="6" placeholder="Your Message"></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-              <span id="msg"></span>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-     <div class="copyright">
-       <p>Copyright © Jose Perdomo 2024. All rights reserved. Designed and developed with passion <i class="fa-solid fa-heart"></i> by Jose Perdomo. Unauthorized use or reproduction of the contents of this website is prohibited.</p>
-     </div>
-  <script src="script.js">
-    
-  </script>
-      <script> var tablinks=document.getElementsByClassName("tab-links");
-      var tabcontents=document.getElementsByClassName("tab-contents");
-      function opentab(tabname){
-          for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-          }
-        for(tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-      </script>
-     <script>
-       var sidemenu= document.getElementById("sidemenu");
-       function openmenu(){
-         sidemenu.style.right="0";
-       }
-       function closemenu(){
-         sidemenu.style.right="-300px";
-       }
-     </script>
-     <script>
-       const scriptURL = 'https://script.google.com/macros/s/AKfycbyDZ-sZWfo8UR4s72XjWrLZqRlLNBQogyjBfQADhBNMK9HGN9PiqtCe6QmUzsuC2KJX/exec'
-       const form = document.forms['submit-to-google-sheet']
-       const msg = document.getElementById("msg");
 
-       form.addEventListener('submit', e => {
-         e.preventDefault()
-         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-           .then(response => {
-             msg.innerHTML="Message Submitted Successfully"
-             setTimeout(function(){
-               msg.innerHTML=""
-             },5000)
-             form.reset()
-           })
-           .catch(error => console.error('Error!', error.message))
-       })
-     </script>
+  <footer>
+    <p>&copy; 2026 Jose &middot; Built from scratch &middot; Texas, USA</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,23 +1,45 @@
-Portfolio Website
+# Jose — Portfolio
 
+A personal portfolio website. Built with plain HTML, CSS, and JavaScript — no build step, no dependencies.
 
-Welcome to my portfolio website! This project showcases my skills, projects, and experiences in web development and computer science. The website is built using HTML, CSS, and JavaScript, and it is hosted on GitHub Pages. Development and testing were primarily done on Replit, making it easy to integrate changes and preview updates quickly.
+## Before you publish
 
-Features
-Responsive Design: The website is fully responsive, ensuring optimal viewing across all devices, including desktops, tablets, and mobile phones.
-Projects Showcase: Display a curated list of my top coding projects, with descriptions, technologies used, and links to GitHub repositories.
-Interactive Elements: The site includes interactive features like hover effects, animations, and form submissions.
-Contact Section: A simple contact form allows visitors to get in touch with me.
+Open the files and replace these placeholders:
 
+- **`YOUR-USERNAME`** → your GitHub username (in `index.html`, appears twice)
+- **`YOUR-PROFILE`** → your LinkedIn profile handle (in `index.html`)
 
-Current Status
-The website is temporarily down as I am actively working on improvements. Please check back soon for updates!
+Your email (`calpules1@icloud.com`) is already set.
 
-Technologies Used
-HTML5: Structure and content of the website
-CSS3: Styling, animations, and layout management
-JavaScript: Interactive elements and dynamic content loading
-Replit: Development environment
-GitHub Pages: Hosting platform
+## Run locally
 
+Just open `index.html` in a browser. That's it.
 
+Or serve it with Python:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## Deploy free with GitHub Pages
+
+1. Create a new GitHub repository named **`YOUR-USERNAME.github.io`**
+   (use your real username — this exact name makes it your main site).
+2. Upload `index.html`, `styles.css`, `script.js`, and this `README.md`.
+3. Go to **Settings → Pages**, set the source to the `main` branch, root folder.
+4. Wait ~1 minute. Your site is live at **`https://YOUR-USERNAME.github.io`**.
+
+## Files
+
+```
+index.html    — page structure and content
+styles.css    — all styling (responsive, dark theme)
+script.js     — scroll animations + mobile menu
+```
+
+## Edit your content
+
+All text lives in `index.html`. To add a project, copy one `<div class="project">…</div>`
+block in the Work section and update the title, description, and tech stack tags.
