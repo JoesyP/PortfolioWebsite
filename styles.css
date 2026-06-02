@@ -167,22 +167,43 @@ h1 {
 }
 .service-price strong { color: var(--accent); font-size: 15px; }
 
+/* ── PRICING CALLOUT (replaces full pricing section) ── */
+.pricing-callout {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: 16px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 12px; padding: 20px 26px; margin-bottom: 32px;
+}
+.pricing-callout-text { font-size: 15px; color: var(--muted); }
+.pricing-callout-text strong { color: var(--accent); }
+
 /* ── WORK ─────────────────────────────────────── */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin-bottom: 44px;
 }
+.work-grid-single { max-width: 640px; }
 .work-card {
   background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
   padding: 30px; display: flex; flex-direction: column; gap: 14px;
   transition: border-color 0.28s, transform 0.28s;
 }
 .work-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.work-card-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .work-type {
   font-family: var(--mono); font-size: 11px; color: var(--accent);
   letter-spacing: 0.5px; text-transform: uppercase;
+}
+.work-status {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 11px; color: var(--accent);
+  background: rgba(0, 240, 168, 0.08); border: 1px solid rgba(0, 240, 168, 0.2);
+  padding: 4px 10px; border-radius: 20px; white-space: nowrap;
+}
+.work-status-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+  animation: pulse 2s infinite; flex-shrink: 0;
 }
 .work-card h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.3px; }
 .work-location { font-size: 14px; color: var(--muted); font-weight: 400; }
