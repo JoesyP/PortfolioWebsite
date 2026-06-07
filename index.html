@@ -13,6 +13,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Responsive video embed for client work demos */
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 1.25rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    @supports not (aspect-ratio: 16 / 9) {
+      .video-wrap { padding-top: 56.25%; height: 0; }
+    }
+    /* Two-column work grid for side-by-side cards */
+    .work-grid-double {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .work-grid-double { grid-template-columns: 1fr; }
+    }
+  </style>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -112,7 +143,28 @@
       <h2 class="sec-title">What I've built</h2>
       <p class="section-intro">A sample of recent client projects. Client details are kept confidential &mdash; they own their product. More work available on request.</p>
 
-      <div class="work-grid work-grid-single">
+      <div class="work-grid work-grid-double">
+
+        <div class="work-card">
+          <div class="work-card-header">
+            <span class="work-type">Full System &middot; Admin Dashboard</span>
+            <span class="work-status"><span class="work-status-dot"></span>Demo Walkthrough</span>
+          </div>
+          <h3>Local Service Business <span class="work-location">Houston, TX</span></h3>
+          <p>A complete custom system &mdash; public website plus a self-managed admin dashboard for handling bookings, promotions, and day-to-day updates with no technical knowledge required. Full walkthrough below.</p>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/zPvA_rwLU_s"
+              title="Full system demo walkthrough"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="stack">
+            <span class="s">Next.js</span><span class="s">Supabase</span><span class="s">TypeScript</span><span class="s">Tailwind</span>
+          </div>
+        </div>
 
         <div class="work-card">
           <div class="work-card-header">
@@ -182,4 +234,5 @@
   </footer>
 
   <script src="script.js"></script>
+</body>
 </html>
