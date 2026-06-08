@@ -45,7 +45,7 @@
       .work-grid-double { grid-template-columns: 1fr; }
     }
 
-    /* ── Language toggle button ── */
+    /* ── Language toggle ── */
     .lang-toggle {
       display: inline-flex;
       align-items: center;
@@ -71,13 +71,19 @@
       background: rgba(255,255,255,0.12);
       color: #fff;
     }
-    .lang-toggle:hover span { color: rgba(255,255,255,0.75); }
-    .lang-toggle:hover span.active { color: #fff; }
 
     /* ── Hide/show language layers ── */
     .es { display: none; }
     html[lang="es"] .en { display: none; }
     html[lang="es"] .es { display: revert; }
+
+    /* ── CTA sub-hint under hero buttons ── */
+    .cta-hint {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.42);
+      letter-spacing: 0.01em;
+    }
   </style>
   <script>
     (function(c,l,a,r,i,t,y){
@@ -105,9 +111,9 @@
         <a href="#services" class="es">Servicios</a>
         <a href="#contact"  class="en">Contact</a>
         <a href="#contact"  class="es">Contacto</a>
-        <a href="tel:+18182944596" class="btn btn-primary nav-cta en">Get a Free Demo</a>
-        <a href="tel:+18182944596" class="btn btn-primary nav-cta es">Demo Gratis</a>
-        <!-- Language toggle -->
+        <!-- Primary CTA: text is lower friction than a cold call -->
+        <a href="sms:+18182944596&body=Hey%20Jose%2C%20I%27m%20interested%20in%20a%20free%20demo%20for%20my%20business." class="btn btn-primary nav-cta en">Text for a Free Demo</a>
+        <a href="sms:+18182944596&body=Hola%20Jose%2C%20me%20interesa%20una%20demo%20gratis%20para%20mi%20negocio." class="btn btn-primary nav-cta es">Texto para Demo Gratis</a>
         <button class="lang-toggle" id="langBtn" aria-label="Switch language" onclick="toggleLang()">
           <span id="enLabel" class="active">EN</span>
           <span id="esLabel">ES</span>
@@ -126,15 +132,21 @@
       <h1 class="en">Your business deserves<br>a website that<br><span class="grad">actually works.</span></h1>
       <h1 class="es">Tu negocio merece<br>un sitio web que<br><span class="grad">realmente funcione.</span></h1>
 
-      <p class="lead en">I build clean, fast, custom websites for local small businesses in Cypress, Katy, and Houston. No templates. No agencies. Just a local software engineer who gets it done.</p>
-      <p class="lead es">Creo sitios web limpios, rápidos y personalizados para pequeños negocios locales en Cypress, Katy y Houston. Sin plantillas. Sin agencias. Solo un ingeniero de software local que lo hace realidad.</p>
+      <!-- Updated lead: surfaces one-time fee & no monthly charges upfront -->
+      <p class="lead en">I build clean, fast, custom websites for local small businesses in Cypress, Katy, and Houston. One-time fee &mdash; no monthly charges, no agencies, no templates. Just a local software engineer who gets it done.</p>
+      <p class="lead es">Creo sitios web limpios, rápidos y personalizados para pequeños negocios en Cypress, Katy y Houston. Pago único &mdash; sin cargos mensuales, sin agencias, sin plantillas. Solo un ingeniero local que lo hace realidad.</p>
 
       <div class="cta-row">
         <a href="#work" class="btn btn-primary en">See My Work</a>
         <a href="#work" class="btn btn-primary es">Ver Mi Trabajo</a>
-        <a href="tel:+18182944596" class="btn btn-ghost en">Get a Free Demo</a>
-        <a href="tel:+18182944596" class="btn btn-ghost es">Demo Gratis</a>
+        <!-- Text opens SMS app; call is secondary option surfaced below -->
+        <a href="sms:+18182944596&body=Hey%20Jose%2C%20I%27m%20interested%20in%20a%20free%20demo%20for%20my%20business." class="btn btn-ghost en">Text for a Free Demo</a>
+        <a href="sms:+18182944596&body=Hola%20Jose%2C%20me%20interesa%20una%20demo%20gratis%20para%20mi%20negocio." class="btn btn-ghost es">Texto para Demo Gratis</a>
       </div>
+      <!-- Low-commitment hint: prefer to call? option surfaced here -->
+      <p class="cta-hint en">Prefer a call? <a href="tel:+18182944596" style="color:inherit;text-decoration:underline;">818-294-4596</a> &mdash; I pick up.</p>
+      <p class="cta-hint es">¿Prefieres llamar? <a href="tel:+18182944596" style="color:inherit;text-decoration:underline;">818-294-4596</a> &mdash; contesto.</p>
+
       <div class="status en"><span class="dot"></span> Available for new clients &middot; Cypress TX</div>
       <div class="status es"><span class="dot"></span> Disponible para nuevos clientes &middot; Cypress TX</div>
     </header>
@@ -163,10 +175,10 @@
       <h2 class="sec-title es">Todo lo que tu negocio necesita en línea</h2>
 
       <div class="pricing-callout">
-        <span class="pricing-callout-text en">Simple one-page sites starting as low as <strong>$500</strong> &mdash; priced more competitively than any agency out there. Always.</span>
-        <span class="pricing-callout-text es">Sitios de una página desde tan solo <strong>$500</strong> &mdash; con precios más competitivos que cualquier agencia. Siempre.</span>
-        <a href="tel:+18182944596" class="btn btn-ghost en">Get a Free Demo</a>
-        <a href="tel:+18182944596" class="btn btn-ghost es">Demo Gratis</a>
+        <span class="pricing-callout-text en">Simple one-page sites starting as low as <strong>$500</strong> &mdash; one-time fee, nothing monthly. More competitive than any agency, guaranteed.</span>
+        <span class="pricing-callout-text es">Sitios de una página desde <strong>$500</strong> &mdash; pago único, sin mensualidades. Más competitivo que cualquier agencia, garantizado.</span>
+        <a href="sms:+18182944596&body=Hey%20Jose%2C%20I%27m%20interested%20in%20a%20free%20demo%20for%20my%20business." class="btn btn-ghost en">Text for a Free Demo</a>
+        <a href="sms:+18182944596&body=Hola%20Jose%2C%20me%20interesa%20una%20demo%20gratis%20para%20mi%20negocio." class="btn btn-ghost es">Texto para Demo Gratis</a>
       </div>
 
       <div class="services-grid">
@@ -176,7 +188,7 @@
           <h3 class="en">One-Page Business Site</h3>
           <h3 class="es">Sitio Web de Una Página</h3>
           <p class="en">A clean, fast, mobile-ready site with your hours, services, location, contact form, and Google Maps. Everything a customer needs to find you and call you.</p>
-          <p class="es">Un sitio limpio, rápido y optimizado para móviles con tus horarios, servicios, ubicación, formulario de contacto y Google Maps. Todo lo que un cliente necesita para encontrarte y llamarte.</p>
+          <p class="es">Un sitio limpio, rápido y optimizado para móviles con tus horarios, servicios, ubicación, formulario de contacto y Google Maps. Todo lo que un cliente necesita para encontrarte.</p>
         </div>
 
         <div class="service-card">
@@ -184,7 +196,7 @@
           <h3 class="en">Multi-Page Website</h3>
           <h3 class="es">Sitio Web Multi-Página</h3>
           <p class="en">Home, Services, Gallery, About, Contact &mdash; a full web presence built around your brand. SEO-optimized so you show up on Google.</p>
-          <p class="es">Inicio, Servicios, Galería, Sobre Nosotros, Contacto &mdash; una presencia web completa construida alrededor de tu marca. Optimizado para que aparezcas en Google.</p>
+          <p class="es">Inicio, Servicios, Galería, Sobre Nosotros, Contacto &mdash; una presencia web completa alrededor de tu marca. Optimizado para que aparezcas en Google.</p>
         </div>
 
         <div class="service-card">
@@ -192,7 +204,7 @@
           <h3 class="en">Custom System + Admin Panel</h3>
           <h3 class="es">Sistema Personalizado + Panel de Admin</h3>
           <p class="en">A full website with a self-managed admin dashboard. Update your schedule, promotions, and announcements yourself &mdash; no calling me every week.</p>
-          <p class="es">Un sitio completo con un panel de administración que tú mismo puedes manejar. Actualiza tu horario, promociones y anuncios sin llamarme cada semana.</p>
+          <p class="es">Un sitio completo con panel de administración propio. Actualiza tu horario, promociones y anuncios sin llamarme cada semana.</p>
         </div>
 
         <div class="service-card">
@@ -200,7 +212,7 @@
           <h3 class="en">AI &amp; Automation Add-ons</h3>
           <h3 class="es">Extras de IA y Automatización</h3>
           <p class="en">AI chat assistant for your site, review request automation, email newsletter system, booking integrations. Built on top of any plan.</p>
-          <p class="es">Asistente de chat con IA, automatización de solicitudes de reseñas, sistema de boletín por email e integraciones de reservas. Disponible como complemento en cualquier plan.</p>
+          <p class="es">Asistente de chat con IA, automatización de reseñas, boletín por email e integraciones de reservas. Disponible como complemento en cualquier plan.</p>
         </div>
 
       </div>
@@ -223,7 +235,11 @@
           <div class="work-card-header">
             <span class="work-type en">Full System &middot; Admin Dashboard</span>
             <span class="work-type es">Sistema Completo &middot; Panel de Admin</span>
-            <span class="work-status"><span class="work-status-dot"></span><span class="en">Demo Walkthrough</span><span class="es">Demo en Video</span></span>
+            <span class="work-status">
+              <span class="work-status-dot"></span>
+              <span class="en">Demo Walkthrough</span>
+              <span class="es">Demo en Video</span>
+            </span>
           </div>
           <h3>Dog House Poker <span class="work-location">Houston, TX</span></h3>
           <p class="en">A complete custom system &mdash; public website plus a self-managed admin dashboard for handling bookings, promotions, and day-to-day updates with no technical knowledge required. Full walkthrough below.</p>
@@ -246,16 +262,20 @@
           <div class="work-card-header">
             <span class="work-type en">Multi-page &middot; Admin Dashboard</span>
             <span class="work-type es">Multi-Página &middot; Panel de Admin</span>
-            <span class="work-status"><span class="work-status-dot"></span><span class="en">Under Development</span><span class="es">En Desarrollo</span></span>
+            <span class="work-status">
+              <span class="work-status-dot"></span>
+              <span class="en">Under Development</span>
+              <span class="es">En Desarrollo</span>
+            </span>
           </div>
           <h3>Lady Luck Poker House <span class="work-location">Houston, TX</span></h3>
           <p class="en">Multi-page website for a Houston-area poker club. Includes a clean public-facing front end and a custom admin dashboard for managing player memberships and posting promotions &mdash; all self-managed by the owner with no technical knowledge required.</p>
-          <p class="es">Sitio web multi-página para un club de póker en el área de Houston. Incluye un frontend público y un panel de administración personalizado para gestionar membresías y publicar promociones &mdash; todo manejado por el dueño sin conocimientos técnicos.</p>
+          <p class="es">Sitio web multi-página para un club de póker en Houston. Incluye un frontend público y un panel de administración para gestionar membresías y publicar promociones &mdash; todo manejado por el dueño sin conocimientos técnicos.</p>
           <div class="stack">
             <span class="s">Next.js</span><span class="s">Supabase</span><span class="s">TypeScript</span><span class="s">Tailwind</span>
           </div>
           <div class="work-note en">&#9656; Video demo available on request for larger systems &amp; custom builds</div>
-          <div class="work-note es">&#9656; Demo en video disponible bajo solicitud para sistemas grandes y construcciones personalizadas</div>
+          <div class="work-note es">&#9656; Demo en video disponible bajo solicitud para sistemas grandes</div>
         </div>
 
       </div>
@@ -269,25 +289,30 @@
       <h2 class="contact-heading en">Let's <span class="grad">build something.</span></h2>
       <h2 class="contact-heading es">Vamos a <span class="grad">construir algo.</span></h2>
 
-      <p class="contact-sub en">I'll mock up a free demo of your site &mdash; no commitment, no pressure. I'm local &mdash; Cypress, TX.</p>
-      <p class="contact-sub es">Te hago una demo gratuita de tu sitio &mdash; sin compromiso, sin presión. Soy local &mdash; Cypress, TX.</p>
+      <p class="contact-sub en">Text or call me and I'll mock up a free demo of your site &mdash; no commitment, no pressure. I'm local &mdash; Cypress, TX.</p>
+      <p class="contact-sub es">Escríbeme o llámame y te hago una demo gratuita &mdash; sin compromiso, sin presión. Soy local &mdash; Cypress, TX.</p>
 
       <div class="contact-grid">
         <div class="contact-item">
-          <div class="contact-label en">Email</div>
-          <div class="contact-label es">Correo</div>
+          <div class="contact-label en">Text (fastest)</div>
+          <div class="contact-label es">Texto (más rápido)</div>
+          <a href="sms:+18182944596&body=Hey%20Jose%2C%20I%27m%20interested%20in%20a%20free%20demo." class="contact-link en">Text 818-294-4596</a>
+          <a href="sms:+18182944596&body=Hola%20Jose%2C%20me%20interesa%20una%20demo%20gratis." class="contact-link es">Texto 818-294-4596</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label en">Call</div>
+          <div class="contact-label es">Llamada</div>
+          <a href="tel:+18182944596" class="contact-link">818-294-4596</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
           <a href="mailto:calpules1@icloud.com" class="contact-link">calpules1@icloud.com</a>
         </div>
         <div class="contact-item">
-          <div class="contact-label en">Phone / Text</div>
-          <div class="contact-label es">Teléfono / Texto</div>
-          <a href="tel:+18182944596" class="contact-link">818-294-4596</a>
-        </div>
-        <div class="contact-item contact-item-wide">
           <div class="contact-label en">Location</div>
           <div class="contact-label es">Ubicación</div>
-          <span class="contact-val en">Based in Cypress, TX &mdash; serving the greater Houston area</span>
-          <span class="contact-val es">Basado en Cypress, TX &mdash; sirviendo el área metropolitana de Houston</span>
+          <span class="contact-val en">Cypress, TX &mdash; serving greater Houston</span>
+          <span class="contact-val es">Cypress, TX &mdash; sirviendo Houston y alrededores</span>
         </div>
         <div class="contact-item contact-item-wide">
           <div class="contact-label">Links</div>
@@ -318,12 +343,8 @@
         <a href="tel:+18182944596">818-294-4596</a>
       </div>
     </div>
-    <div class="footer-bottom en">
-      &copy; 2026 Jose &middot; Cypress, TX &middot; Built from scratch &middot; josedev.app
-    </div>
-    <div class="footer-bottom es">
-      &copy; 2026 Jose &middot; Cypress, TX &middot; Construido desde cero &middot; josedev.app
-    </div>
+    <div class="footer-bottom en">&copy; 2026 Jose &middot; Cypress, TX &middot; Built from scratch &middot; josedev.app</div>
+    <div class="footer-bottom es">&copy; 2026 Jose &middot; Cypress, TX &middot; Construido desde cero &middot; josedev.app</div>
   </footer>
 
   <script src="script.js"></script>
