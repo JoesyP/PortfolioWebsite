@@ -158,9 +158,15 @@
   <nav>
     <div class="nav-inner">
       <div class="logo">jose<span>.dev</span></div>
-      <button class="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langBtn" aria-label="Switch language" onclick="toggleLang()">
+          <span id="enLabel" class="active">EN</span>
+          <span id="esLabel">ES</span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <div class="nav-links">
         <a href="#work"     class="en">Work</a>
         <a href="#work"     class="es">Trabajo</a>
@@ -170,9 +176,10 @@
         <a href="#contact"  class="es">Contacto</a>
         <a href="sms:+18182944596&body=Hey%20Jose%2C%20I%27m%20interested%20in%20a%20free%20demo%20for%20my%20business." class="btn btn-primary nav-cta en">Text for a Free Demo</a>
         <a href="sms:+18182944596&body=Hola%20Jose%2C%20me%20interesa%20una%20demo%20gratis%20para%20mi%20negocio." class="btn btn-primary nav-cta es">Texto para Demo Gratis</a>
-        <button class="lang-toggle" id="langBtn" aria-label="Switch language" onclick="toggleLang()">
-          <span id="enLabel" class="active">EN</span>
-          <span id="esLabel">ES</span>
+        <!-- Desktop lang toggle — hidden on mobile via nav-right taking over -->
+        <button class="lang-toggle lang-toggle-nav" id="langBtnDesktop" aria-label="Switch language" onclick="toggleLang()">
+          <span class="en-label active">EN</span>
+          <span class="es-label">ES</span>
         </button>
       </div>
     </div>
@@ -403,13 +410,17 @@
 
   <script src="script.js"></script>
   <script>
-    // Language toggle
+    // Language toggle — syncs both mobile and desktop pill buttons
     function toggleLang() {
       const html = document.documentElement;
       const isES = html.lang === 'es';
       html.lang = isES ? 'en' : 'es';
+      // Update mobile pill (nav-right)
       document.getElementById('enLabel').classList.toggle('active', isES);
       document.getElementById('esLabel').classList.toggle('active', !isES);
+      // Update desktop pill (nav-links)
+      document.querySelectorAll('.en-label').forEach(el => el.classList.toggle('active', isES));
+      document.querySelectorAll('.es-label').forEach(el => el.classList.toggle('active', !isES));
     }
 
     // Lazy YouTube — only load iframe when user clicks play
