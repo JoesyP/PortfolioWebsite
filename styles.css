@@ -81,6 +81,7 @@ nav {
 
 /* hamburger */
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+/* lang toggle always visible in nav-right on mobile; hidden when nav-links shows on desktop via nav-right:none */
 .nav-toggle span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
@@ -443,3 +444,38 @@ footer { border-top: 1px solid var(--line); position: relative; z-index: 1; }
     font-size: 0.72rem;
   }
 }
+
+/* ── nav-right: lang toggle + hamburger together ── */
+.nav-right {
+  display: none; /* hidden on desktop — lang toggle shows inside nav-links */
+  align-items: center;
+  gap: 10px;
+}
+
+/* On desktop, lang toggle lives inside nav-links (normal flow) */
+/* On mobile, nav-links is hidden — show nav-right with pill + hamburger */
+@media (max-width: 640px) {
+  .nav-right {
+    display: flex;
+  }
+  /* Hide the lang toggle that was in nav-links on desktop */
+  .nav-links .lang-toggle-desktop {
+    display: none;
+  }
+  /* Make sure nav-toggle inside nav-right shows */
+  .nav-right .nav-toggle {
+    display: flex;
+  }
+  /* Nav-inner: logo left, nav-right right */
+  .nav-inner {
+    position: relative;
+  }
+}
+
+/* ── Lang toggle: desktop shows in nav-links, mobile shows in nav-right ── */
+/* Hide desktop pill on mobile (nav-right pill takes over) */
+@media (max-width: 640px) {
+  .lang-toggle-nav { display: none !important; }
+}
+/* Hide mobile pill on desktop (it's in nav-right which is display:none on desktop) */
+/* nav-right is already display:none on desktop so this is automatic */
